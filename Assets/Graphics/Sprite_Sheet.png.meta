@@ -10,10 +10,10 @@ TextureImporter:
     21300010: Quark_Sprite_Sheet_5
     21300012: Quark_Sprite_Sheet_6
     21300014: Quark_Sprite_Sheet_7
-    21300016: Quark_Sprite_Sheet_8
-    21300018: Quark_Sprite_Sheet_9
-    21300020: Quark_Sprite_Sheet_10
-    21300022: Quark_Sprite_Sheet_11
+    21300016: QSpriteBullet1
+    21300018: QSpriteBullet2
+    21300020: QSpriteBullet3
+    21300022: QSpriteBullet4
     21300024: Quark_Sprite_Sheet_12
     21300026: Quark_Sprite_Sheet_13
     21300028: Quark_Sprite_Sheet_14
@@ -306,7 +306,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Quark_Sprite_Sheet_8
+      name: QSpriteBullet1
       rect:
         serializedVersion: 2
         x: 631
@@ -326,7 +326,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Quark_Sprite_Sheet_9
+      name: QSpriteBullet2
       rect:
         serializedVersion: 2
         x: 695
@@ -346,7 +346,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Quark_Sprite_Sheet_10
+      name: QSpriteBullet3
       rect:
         serializedVersion: 2
         x: 759
@@ -366,7 +366,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Quark_Sprite_Sheet_11
+      name: QSpriteBullet4
       rect:
         serializedVersion: 2
         x: 823

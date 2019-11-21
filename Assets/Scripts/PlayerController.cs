@@ -1,30 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(Collider2D))]
-public class PlayerController : MonoBehaviour
+public class PlayerController : BaseShotController, ICanExplodeController
 {
     public float speed = 10.0f;
-
-    public float boundX = 10.0f;
-
-    public float reloadTime = 1.0f;
-
-    private float lastTimeShot = 0f;
-
-    public GameObject bulletPrefab;
-
-    public GameObject explosionPrefab;
-
-    private Rigidbody2D rigidBody;
-
-    // Use this for initialization 
-    void Start()
-    {
-        rigidBody = GetComponent<Rigidbody2D>();
-    }
 
     void FixedUpdate()
     {
@@ -50,11 +30,5 @@ public class PlayerController : MonoBehaviour
                 Instantiate(bulletPrefab, transform.position, Quaternion.identity);
             }
         }
-    }
-
-    public void Hit(Vector3 hitCoordinates)
-    {
-        // Create an explosion on the coordinates of the hit.
-        Instantiate(explosionPrefab, hitCoordinates, Quaternion.identity);
     }
 }
