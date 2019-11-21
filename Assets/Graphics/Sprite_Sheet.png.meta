@@ -51,8 +51,8 @@ TextureImporter:
     21300092: Quark_Sprite_Sheet_46
     21300094: Quark_Sprite_Sheet_47
     21300096: Quark_Sprite_Sheet_48
-    21300098: Quark_Sprite_Sheet_49
-    21300100: Quark_Sprite_Sheet_51
+    21300098: QSpriteEnemy1
+    21300100: QSpriteEnemy2
     21300102: Quark_Sprite_Sheet_52
     21300104: Quark_Sprite_Sheet_53
     21300106: Quark_Sprite_Sheet_54
@@ -746,13 +746,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Quark_Sprite_Sheet_49
+      name: QSpriteEnemy1
       rect:
         serializedVersion: 2
         x: 42
         y: 60
         width: 159
-        height: 461
+        height: 464
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -766,7 +766,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Quark_Sprite_Sheet_51
+      name: QSpriteEnemy2
       rect:
         serializedVersion: 2
         x: 246
