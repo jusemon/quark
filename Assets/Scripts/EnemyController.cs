@@ -1,7 +1,5 @@
 ﻿using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D))]
-[RequireComponent(typeof(Collider2D))]
 public class EnemyController : BaseShotController, ICanExplodeController
 {
     public float speedX = 10.0f;
@@ -30,6 +28,11 @@ public class EnemyController : BaseShotController, ICanExplodeController
 
             reloadTime = Random.Range(minShootingTime, maxShootingTime);
 
+            // Play the shoot sound
+            if (shootSound)
+            {
+                GetComponent<AudioSource>().PlayOneShot(shootSound);
+            }
             // Create the bullet
             Instantiate(bulletPrefab, transform.position, Quaternion.identity);
         }

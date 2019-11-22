@@ -1,10 +1,9 @@
 ﻿using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D))]
-[RequireComponent(typeof(Collider2D))]
 public class PlayerController : BaseShotController, ICanExplodeController
 {
     public float speed = 10.0f;
+
 
     void FixedUpdate()
     {
@@ -25,6 +24,12 @@ public class PlayerController : BaseShotController, ICanExplodeController
             {
                 // Set the current time as the last time the spaceship has fired
                 lastTimeShot = Time.time;
+
+                // Play the shoot sound
+                if (shootSound)
+                {
+                    GetComponent<AudioSource>().PlayOneShot(shootSound);
+                }
 
                 // Create the bullet
                 Instantiate(bulletPrefab, transform.position, Quaternion.identity);

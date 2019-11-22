@@ -2,6 +2,7 @@
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(Collider2D))]
+[RequireComponent(typeof(AudioSource))]
 public class BaseShotController: MonoBehaviour
 {
     protected Rigidbody2D rigidBody;
@@ -13,6 +14,8 @@ public class BaseShotController: MonoBehaviour
     public float boundX = 10.0f;
 
     public float reloadTime = 1.0f;
+
+    public AudioClip shootSound;
 
     protected float lastTimeShot = 0f;
 

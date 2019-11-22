@@ -1,7 +1,5 @@
 ﻿using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D))]
-[RequireComponent(typeof(Collider2D))]
 public class EnemyControllerSmartAttacker : BaseShotController, ICanExplodeController
 {
     public float speedX = 10.0f;
@@ -40,6 +38,12 @@ public class EnemyControllerSmartAttacker : BaseShotController, ICanExplodeContr
 
                 // Set the current time as the last time the spaceship has fired
                 lastTimeShot = Time.time;
+
+                // Play the shoot sound
+                if (shootSound)
+                {
+                    GetComponent<AudioSource>().PlayOneShot(shootSound);
+                }
 
                 // Create the bullet
                 Instantiate(bulletPrefab, transform.position, Quaternion.identity);
