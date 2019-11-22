@@ -14,7 +14,7 @@ public class EnemyControllerSmartAttacker : BaseShotController, ICanExplodeContr
     public override void Start()
     {
         base.Start();
-        playerTransform = FindObjectOfType<PlayerController>().transform;
+        playerTransform = FindObjectOfType<PlayerController>()?.transform;
     }
 
     void FixedUpdate()
@@ -32,8 +32,7 @@ public class EnemyControllerSmartAttacker : BaseShotController, ICanExplodeContr
         if (Time.time - lastTimeShot > reloadTime)
         {
             // Check if the enemy is "close" on the x-axis to the player
-
-            if (Mathf.Abs(playerTransform.position.x - transform.position.x) < shootSensitivity)
+            if (playerTransform && Mathf.Abs(playerTransform.position.x - transform.position.x) < shootSensitivity)
             {
 
                 // Set the current time as the last time the spaceship has fired
@@ -54,8 +53,6 @@ public class EnemyControllerSmartAttacker : BaseShotController, ICanExplodeContr
     public override void Hit(Vector3 hitCoordinates)
     {
         base.Hit(hitCoordinates);
-
-        // TODO: Aditional score anid destruction logic required.
-        FindObjectOfType<UIScore>().IncreaseScore(1);
+        Destroy(gameObject);
     }
 }

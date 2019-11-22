@@ -17,12 +17,21 @@ public class BaseShotController: MonoBehaviour
 
     public AudioClip shootSound;
 
+    public float timeBeforeDestruction = 20.0f;
+
+    public bool autodestruction = false;
+
     protected float lastTimeShot = 0f;
 
     // Start is called before the first frame update
     public virtual void Start()
     {
         rigidBody = GetComponent<Rigidbody2D>();
+
+        if (autodestruction)
+        {
+            Destroy(gameObject, timeBeforeDestruction);
+        }
     }
 
     public virtual void Hit(Vector3 hitCoordinates)

@@ -71,7 +71,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300100, guid: df594d926c61da24e85d402318f02119, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -242,7 +242,7 @@ MonoBehaviour:
     type: 3}
   explosionPrefab: {fileID: 794554645256711392, guid: f0290fefd4f38aa48a7f625e999bf157,
     type: 3}
-  boundX: 10
+  boundX: 5
   reloadTime: 1
   shootSound: {fileID: 8300000, guid: 32d3f16307380ff43acfff6c4ea4e77f, type: 3}
   speedX: 30

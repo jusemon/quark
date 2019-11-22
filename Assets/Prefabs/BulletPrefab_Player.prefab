@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2053363352385205354}
   - component: {fileID: 2532398289486307824}
   m_Layer: 0
-  m_Name: BulletPrefab
+  m_Name: BulletPrefab_Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -70,7 +70,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300022, guid: df594d926c61da24e85d402318f02119, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -141,3 +141,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a3d3ad89160e8e4d9af2c756bc578b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 10
+  timeBeforeDestruction: 7

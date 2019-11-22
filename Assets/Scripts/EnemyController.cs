@@ -42,7 +42,6 @@ public class EnemyController : BaseShotController, ICanExplodeController
     {
         base.Hit(hitCoordinates);
 
-        // TODO: Aditional score anid destruction logic required.
-        FindObjectOfType<UIScore>().IncreaseScore(1);
+        Destroy(gameObject);
     }
 }
