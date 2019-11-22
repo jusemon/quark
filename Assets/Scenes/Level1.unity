@@ -1260,7 +1260,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.25
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1730,7 +1730,7 @@ MonoBehaviour:
   powerUps:
   - {fileID: 54473347469473555, guid: 4ad6624dbb777a143a111c2c3f26f879, type: 3}
   minSecondsToSpawnEnemies: 5
-  maxSecondsToSpawnEnemies: 15
+  maxSecondsToSpawnEnemies: 10
   minSecondsToSpawnDecorations: 6
   maxSecondsToSpawnDecorations: 8
   minSecondsToSpawnPowerUps: 30

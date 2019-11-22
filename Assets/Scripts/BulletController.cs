@@ -33,11 +33,15 @@ public class BulletController : MonoBehaviour
         // Check if the player collides with the bullet (and it has been shot by an enemy)
         if ((collision.tag == "Player" && speed < 0) || (collision.tag == "Enemy" && speed > 0))
         {
-            // Send the message to the player/enemy that the spaceship has been hit
-            collision.GetComponent<ICanExplodeController>().Hit(transform.position);
+            var component = collision.GetComponent<ICanExplodeController>();
+            if (component != null)
+            {
+                // Send the message to the player/enemy that the spaceship has been hit
+                collision.GetComponent<ICanExplodeController>().Hit(transform.position);
 
-            // Destroy the bullet
-            Destroy(gameObject);
+                // Destroy the bullet
+                Destroy(gameObject);
+            }
         }
     }
 }
