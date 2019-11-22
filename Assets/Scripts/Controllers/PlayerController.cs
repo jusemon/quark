@@ -44,6 +44,6 @@ public class PlayerController : BaseShotController, ICanExplodeController
         {
             GetComponent<AudioSource>().PlayOneShot(explosionSound);
         }
-        FindObjectOfType<LivesCounter>().RemoveLife();
+        FindObjectOfType<UILivesCounter>().RemoveLife();
     }
 }

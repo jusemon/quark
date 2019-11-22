@@ -14,7 +14,7 @@ public class CollectableHeart : MonoBehaviour
         // Check if the player collides with the angel's cake
         if (collision.tag == "Player")
         {
-            FindObjectOfType<LivesCounter>().AddLife();
+            FindObjectOfType<UILivesCounter>().AddLife();
 
             // Play the collectable sound
             if (collectableSound)
