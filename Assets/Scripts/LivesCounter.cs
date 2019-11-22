@@ -40,6 +40,7 @@ public class LivesCounter : MonoBehaviour
         lives--;
         if (lives <= 0)
         {
+            // TODO: Game Over Screen
             SceneManager.LoadScene("Level1");
         }
 

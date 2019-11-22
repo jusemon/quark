@@ -245,6 +245,12 @@ MonoBehaviour:
   boundX: 5
   reloadTime: 1
   shootSound: {fileID: 8300000, guid: 32d3f16307380ff43acfff6c4ea4e77f, type: 3}
+  explosionSound: {fileID: 8300000, guid: 7b9f1f9d5430d93408bd665b20838eb5, type: 3}
+  timeBeforeDestruction: 20
+  autodestruction: 0
   speedX: 50
   speedY: -1
+  collectableValue: 2
+  collectable: {fileID: 607685499179347276, guid: bc02f08a4d08a164f851e4291d5ce836,
+    type: 3}
   shootSensitivity: 3

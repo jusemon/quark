@@ -4,19 +4,21 @@ using UnityEngine;
 
 [RequireComponent(typeof(BoxCollider2D))]
 [RequireComponent(typeof(AudioSource))]
-public class CollectableStar : MonoBehaviour
+public class CollectableStar : MonoBehaviour, ICollectable
 {
     /// <summary>
     /// The collectable sound
     /// </summary>
     public AudioClip collectableSound;
 
+    public int value = 1;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         // Check if the player collides with the angel's cake
         if (collision.tag == "Player")
         {
-            FindObjectOfType<UIScore>().IncreaseScore(1);
+            FindObjectOfType<UIScore>().IncreaseScore(value);
 
             // Play the collectable sound
             if (collectableSound)
@@ -41,4 +43,10 @@ public class CollectableStar : MonoBehaviour
             Destroy(this);
         }
     }
+
+    public void SetValue(int value)
+    {
+        this.value = value;
+    }
+
 }

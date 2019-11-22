@@ -17,6 +17,8 @@ public class BaseShotController: MonoBehaviour
 
     public AudioClip shootSound;
 
+    public AudioClip explosionSound;
+
     public float timeBeforeDestruction = 20.0f;
 
     public bool autodestruction = false;
@@ -32,6 +34,17 @@ public class BaseShotController: MonoBehaviour
         {
             Destroy(gameObject, timeBeforeDestruction);
         }
+    }
+
+    public void Shoot()
+    {
+        // Play the shoot sound
+        if (shootSound)
+        {
+            GetComponent<AudioSource>().PlayOneShot(shootSound);
+        }
+        // Create the bullet
+        Instantiate(bulletPrefab, transform.position, Quaternion.identity);
     }
 
     public virtual void Hit(Vector3 hitCoordinates)

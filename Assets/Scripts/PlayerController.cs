@@ -40,6 +40,10 @@ public class PlayerController : BaseShotController, ICanExplodeController
     public override void Hit(Vector3 hitCoordinates)
     {
         base.Hit(hitCoordinates);
+        if (explosionSound)
+        {
+            GetComponent<AudioSource>().PlayOneShot(explosionSound);
+        }
         FindObjectOfType<LivesCounter>().RemoveLife();
     }
 }

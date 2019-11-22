@@ -235,6 +235,7 @@ MonoBehaviour:
   boundX: 10
   reloadTime: 1
   shootSound: {fileID: 8300000, guid: 32d3f16307380ff43acfff6c4ea4e77f, type: 3}
+  explosionSound: {fileID: 8300000, guid: 7b9f1f9d5430d93408bd665b20838eb5, type: 3}
   timeBeforeDestruction: 20
   autodestruction: 0
   speed: 10

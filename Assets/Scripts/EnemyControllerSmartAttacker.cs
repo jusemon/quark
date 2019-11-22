@@ -1,10 +1,7 @@
 ﻿using UnityEngine;
 
-public class EnemyControllerSmartAttacker : BaseShotController, ICanExplodeController
+public class EnemyControllerSmartAttacker : BaseEnemyController, ICanExplodeController, ICanShotController
 {
-    public float speedX = 10.0f;
-
-    public float speedY = -1.0f;
 
     public float shootSensitivity;
 
@@ -38,21 +35,9 @@ public class EnemyControllerSmartAttacker : BaseShotController, ICanExplodeContr
                 // Set the current time as the last time the spaceship has fired
                 lastTimeShot = Time.time;
 
-                // Play the shoot sound
-                if (shootSound)
-                {
-                    GetComponent<AudioSource>().PlayOneShot(shootSound);
-                }
-
-                // Create the bullet
-                Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+                // Shoot!
+                Shoot();
             }
         }
-    }
-
-    public override void Hit(Vector3 hitCoordinates)
-    {
-        base.Hit(hitCoordinates);
-        Destroy(gameObject);
     }
 }

@@ -1,11 +1,7 @@
 ﻿using UnityEngine;
 
-public class EnemyController : BaseShotController, ICanExplodeController
+public class EnemyController : BaseEnemyController, ICanShotController, ICanExplodeController
 {
-    public float speedX = 10.0f;
-
-    public float speedY = -1.0f;
-
     public float minShootingTime = 1f;
 
     public float maxShootingTime = 3f;
@@ -27,21 +23,7 @@ public class EnemyController : BaseShotController, ICanExplodeController
             lastTimeShot = Time.time;
 
             reloadTime = Random.Range(minShootingTime, maxShootingTime);
-
-            // Play the shoot sound
-            if (shootSound)
-            {
-                GetComponent<AudioSource>().PlayOneShot(shootSound);
-            }
-            // Create the bullet
-            Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+            Shoot();
         }
-    }
-
-    public override void Hit(Vector3 hitCoordinates)
-    {
-        base.Hit(hitCoordinates);
-
-        Destroy(gameObject);
     }
 }
