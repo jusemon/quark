@@ -2,19 +2,19 @@ fileFormatVersion: 2
 guid: df594d926c61da24e85d402318f02119
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Quark_Sprite_Sheet_0
-    21300002: Quark_Sprite_Sheet_1
-    21300004: Quark_Sprite_Sheet_2
+    21300000: QSpriteHalo1
+    21300002: QSpriteHalo2
+    21300004: QSpritePlanetGray1
     21300006: QSpriteCharBlue1
     21300008: Quark_Sprite_Sheet_4
     21300010: Quark_Sprite_Sheet_5
     21300012: Quark_Sprite_Sheet_6
-    21300014: Quark_Sprite_Sheet_7
-    21300016: QSpriteBullet1
-    21300018: QSpriteBullet2
-    21300020: QSpriteBullet3
-    21300022: QSpriteBullet4
-    21300024: Quark_Sprite_Sheet_12
+    21300014: QSpritePlanetYellow1
+    21300016: QSpriteBall1
+    21300018: QSpriteBall2
+    21300020: QSpriteBall3
+    21300022: QSpriteBall4
+    21300024: QSpritePlanetOrange1
     21300026: Quark_Sprite_Sheet_13
     21300028: Quark_Sprite_Sheet_14
     21300030: Quark_Sprite_Sheet_15
@@ -22,12 +22,12 @@ TextureImporter:
     21300034: Quark_Sprite_Sheet_17
     21300036: Quark_Sprite_Sheet_18
     21300038: Quark_Sprite_Sheet_19
-    21300040: Quark_Sprite_Sheet_20
+    21300040: QSpritePlanetRed1
     21300042: Quark_Sprite_Sheet_21
     21300044: Quark_Sprite_Sheet_22
     21300046: Quark_Sprite_Sheet_23
     21300048: Quark_Sprite_Sheet_24
-    21300050: Quark_Sprite_Sheet_25
+    21300050: QSpritePlanetOrange3
     21300052: Quark_Sprite_Sheet_26
     21300054: Quark_Sprite_Sheet_27
     21300056: Quark_Sprite_Sheet_28
@@ -39,10 +39,10 @@ TextureImporter:
     21300068: Quark_Sprite_Sheet_34
     21300070: Quark_Sprite_Sheet_35
     21300072: Quark_Sprite_Sheet_36
-    21300074: Quark_Sprite_Sheet_37
+    21300074: QSpritePlanetViolet1
     21300076: Quark_Sprite_Sheet_38
     21300078: Quark_Sprite_Sheet_39
-    21300080: Quark_Sprite_Sheet_40
+    21300080: QSpritePlanetOrange2
     21300082: Quark_Sprite_Sheet_41
     21300084: Quark_Sprite_Sheet_42
     21300086: Quark_Sprite_Sheet_43
@@ -55,15 +55,15 @@ TextureImporter:
     21300100: QSpriteEnemy2
     21300102: Quark_Sprite_Sheet_52
     21300104: Quark_Sprite_Sheet_53
-    21300106: Quark_Sprite_Sheet_54
+    21300106: QSpriteStart1
     21300108: Quark_Sprite_Sheet_55
     21300110: Quark_Sprite_Sheet_56
     21300112: Quark_Sprite_Sheet_57
-    21300114: Quark_Sprite_Sheet_58
-    21300116: Quark_Sprite_Sheet_59
-    21300118: Quark_Sprite_Sheet_60
+    21300114: QSpriteHeart1
+    21300116: QSpriteAsteroidGray1
+    21300118: QSpritePlanetBlackGray1
     21300120: Quark_Sprite_Sheet_61
-    21300122: Quark_Sprite_Sheet_62
+    21300122: QSpriteStart
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -146,7 +146,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Quark_Sprite_Sheet_0
+      name: QSpriteHalo1
       rect:
         serializedVersion: 2
         x: 32
@@ -166,7 +166,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Quark_Sprite_Sheet_1
+      name: QSpriteHalo2
       rect:
         serializedVersion: 2
         x: 529
@@ -186,7 +186,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Quark_Sprite_Sheet_2
+      name: QSpritePlanetGray1
       rect:
         serializedVersion: 2
         x: 1797
@@ -286,10 +286,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Quark_Sprite_Sheet_7
+      name: QSpritePlanetYellow1
       rect:
         serializedVersion: 2
-        x: 1797
+        x: 1790
         y: 1484
         width: 244
         height: 245
@@ -306,7 +306,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: QSpriteBullet1
+      name: QSpriteBall1
       rect:
         serializedVersion: 2
         x: 631
@@ -326,7 +326,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: QSpriteBullet2
+      name: QSpriteBall2
       rect:
         serializedVersion: 2
         x: 695
@@ -346,7 +346,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: QSpriteBullet3
+      name: QSpriteBall3
       rect:
         serializedVersion: 2
         x: 759
@@ -366,7 +366,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: QSpriteBullet4
+      name: QSpriteBall4
       rect:
         serializedVersion: 2
         x: 823
@@ -386,7 +386,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Quark_Sprite_Sheet_12
+      name: QSpritePlanetOrange1
       rect:
         serializedVersion: 2
         x: 1797
@@ -506,7 +506,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Quark_Sprite_Sheet_20
+      name: QSpritePlanetRed1
       rect:
         serializedVersion: 2
         x: 1796
@@ -586,7 +586,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Quark_Sprite_Sheet_25
+      name: QSpritePlanetOrange3
       rect:
         serializedVersion: 2
         x: 601
@@ -706,10 +706,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Quark_Sprite_Sheet_37
+      name: QSpritePlanetViolet1
       rect:
         serializedVersion: 2
-        x: 1797
+        x: 1790
         y: 606
         width: 244
         height: 244
@@ -726,7 +726,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Quark_Sprite_Sheet_40
+      name: QSpritePlanetOrange2
       rect:
         serializedVersion: 2
         x: 960
@@ -826,7 +826,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Quark_Sprite_Sheet_54
+      name: QSpriteStart1
       rect:
         serializedVersion: 2
         x: 434
@@ -866,11 +866,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Quark_Sprite_Sheet_58
+      name: QSpriteHeart1
       rect:
         serializedVersion: 2
         x: 432
-        y: 123
+        y: 121
         width: 182
         height: 178
       alignment: 0
@@ -886,7 +886,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Quark_Sprite_Sheet_59
+      name: QSpriteAsteroidGray1
       rect:
         serializedVersion: 2
         x: 692
@@ -906,7 +906,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Quark_Sprite_Sheet_60
+      name: QSpritePlanetBlackGray1
       rect:
         serializedVersion: 2
         x: 998
@@ -946,7 +946,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Quark_Sprite_Sheet_62
+      name: QSpriteStart
       rect:
         serializedVersion: 2
         x: 474

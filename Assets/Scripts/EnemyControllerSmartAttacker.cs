@@ -46,4 +46,12 @@ public class EnemyControllerSmartAttacker : BaseShotController, ICanExplodeContr
             }
         }
     }
+
+    public override void Hit(Vector3 hitCoordinates)
+    {
+        base.Hit(hitCoordinates);
+
+        // TODO: Aditional score anid destruction logic required.
+        FindObjectOfType<UIScore>().IncreaseScore(1);
+    }
 }

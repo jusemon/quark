@@ -34,4 +34,12 @@ public class EnemyController : BaseShotController, ICanExplodeController
             Instantiate(bulletPrefab, transform.position, Quaternion.identity);
         }
     }
+
+    public override void Hit(Vector3 hitCoordinates)
+    {
+        base.Hit(hitCoordinates);
+
+        // TODO: Aditional score anid destruction logic required.
+        FindObjectOfType<UIScore>().IncreaseScore(1);
+    }
 }

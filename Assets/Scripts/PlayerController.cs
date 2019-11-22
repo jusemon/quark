@@ -31,4 +31,10 @@ public class PlayerController : BaseShotController, ICanExplodeController
             }
         }
     }
+
+    public override void Hit(Vector3 hitCoordinates)
+    {
+        base.Hit(hitCoordinates);
+        FindObjectOfType<LivesCounter>().RemoveLife();
+    }
 }
