@@ -43,6 +43,7 @@ public class BaseShotController: MonoBehaviour
         {
             GetComponent<AudioSource>().PlayOneShot(shootSound);
         }
+
         // Create the bullet
         Instantiate(bulletPrefab, transform.position, Quaternion.identity);
     }

@@ -1,5 +1,5 @@
-﻿using UnityEngine;
-using UnityEngine.SceneManagement;
+﻿using System.Linq;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class UILivesCounter : MonoBehaviour
@@ -12,8 +12,9 @@ public class UILivesCounter : MonoBehaviour
 
     private GameObject[] hearts;
 
-    private Text heartsText;
+    public GameObject gameOverScreen;
 
+    private Text heartsText;
 
     // Start is called before the first frame update
     void Start()
@@ -47,7 +48,15 @@ public class UILivesCounter : MonoBehaviour
         if (lives <= 0)
         {
             // TODO: Game Over Screen
-            SceneManager.LoadScene("Level1");
+            if (gameOverScreen)
+            {
+                Time.timeScale = 0;        
+                foreach (var item in FindObjectsOfType<AudioSource>().Where(aus => aus.isPlaying && aus.name == "Music"))
+                {
+                    item.Pause();
+                }
+                gameOverScreen.SetActive(true);
+            }
         }
 
         UpdateGrafics();
