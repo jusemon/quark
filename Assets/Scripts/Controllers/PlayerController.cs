@@ -13,7 +13,6 @@ public class PlayerController : BaseShotController, ICanExplodeController
 
         if (joystick && Input.GetAxis("Horizontal") == 0)
         {
-            Debug.Log($"Joystick {joystick.Horizontal}");
             x = transform.position.x + joystick.Horizontal * Time.deltaTime * speed;
         }
 

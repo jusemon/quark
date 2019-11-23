@@ -232,10 +232,11 @@ MonoBehaviour:
     type: 3}
   explosionPrefab: {fileID: 794554645256711392, guid: f0290fefd4f38aa48a7f625e999bf157,
     type: 3}
-  boundX: 10
+  boundX: 4.5
   reloadTime: 1
   shootSound: {fileID: 8300000, guid: 32d3f16307380ff43acfff6c4ea4e77f, type: 3}
   explosionSound: {fileID: 8300000, guid: 7b9f1f9d5430d93408bd665b20838eb5, type: 3}
   timeBeforeDestruction: 20
   autodestruction: 0
   speed: 10
+  joystick: {fileID: 0}
